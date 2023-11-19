@@ -1,0 +1,281 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #000000;
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  nav ul li a:hover {
+    color: #bbb;
+  }
+  
+  /* Main section styles */
+  .main {
+    padding: 20px 0;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #131313;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Fancy animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section {
+    padding: 50px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Additional hover effects */
+  section#projects .button:hover {
+    transform: scale(1.1);
+  }
+
+
+  /* Fancy animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section {
+    padding: 50px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Updated section styling */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  section {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #eee;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  /* Project cards */
+  .project {
+    background-color: #131313;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    color: #ddd;
+  }
+  
+  /* Button styles */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: linear-gradient(to right, #666 50%, #888 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #555;
+    color: #fff;
+    background-position: -100% 0;
+  }
+
+  /* section {
+    text-align: center;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    padding: 50px 0;
+  } */
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #eee;
+    border-bottom: 2px solid #777;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Project cards with border and texture */
+  .project {
+    background-color: #131313;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #555;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 2px solid #777;
+  }
+
+  .container img {
+    /* width: 60px;
+    height: 60px;  */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px; /* Add spacing between image and text */
+    margin-left: -10%; /* Add spacing between image and text */
+    margin-bottom: -6.3%;
+  }
+
+  .image-position {
+    margin-top: -10%;
+    left: -35%;
+    position: relative;
+  }
+
+ /* Circles styles */
+.circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    opacity: 0.7; /* Transparency */
+    background-color: #FF6347; /* Circle color */
+    z-index: -2; /* Positioned behind content */
+    animation: moveCircles 7s linear infinite; /* Animation */
+  }
+  
+  @keyframes moveCircles {
+    0% {
+      transform: translate(0, 0); /* Initial position */
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate(100vw, 100vh); /* Move off the screen */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Additional styles for content */
+  main {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .background {
+    position: absolute;
+    margin-left: -90%;
+    margin-right: 0%;
+    width: 200%;
+    height: 100%;
+    background-color: black; /* Black background */
+    z-index: -1; /* Pushes it behind content */
+  }
+  
+  #black-text {
+    color: #fff;
+  }

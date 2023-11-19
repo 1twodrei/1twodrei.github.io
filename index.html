@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <img src="IMG_2157.jpg" height="6%" width="6%" ></img>
+        <h1>1twodrei (E.B.)</h1>
+        <ul>
+          <li><a class="details-link" href="#about">About</a></li>
+          <li><a class="details-link" href="#projects">Projects</a></li>
+          <li><a class="details-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="background">
+    <!-- Circles container -->
+    <div class="circle-container"></div>
+  </div>
+
+  <main>
+    <section id="about" id="black-text" class="section" style="color:black; position: relative;">
+      <div class="container">
+        <h2 >About Me</h2>
+        <p >Welcome to my  website! Welcome to my  website!</p>
+        <p >Welcome to my  website! Welcome to my  website! Welcome to my  website!</p>
+      </div>
+    </section>
+  
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Here are a few of my highlighted projects:</p>
+      </br>
+      <div class="project">
+        <h3>CV</h3>
+        <img src="Papirus-Team-Papirus-Places-Folder-blue-linux.png" height="110px" width="110px" class="image-position" />
+         <p>(German Version)</p>
+        <a href="#" class="button">View more</a>
+      </div>
+        <div class="project">
+            
+          <h3>Bug Bounty</h3>
+          <img src="hackerone_logo.jpeg" height="110px" width="110px" class="image-position" />
+          <p>Description of Project 1...</p>
+          <a href="#" class="button">View more</a>
+        
+        </div>
+        <div class="project">
+          <h3>CSS-WebStyler</h3>
+          <img src="logo.png" height="110px" width="110px" class="image-position" />
+            <p>Description of Project 2...</p>
+          <a href="#" class="button">View more</a>
+        </div>
+        
+        <!-- You can add more projects in a similar format -->
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through the following channels:</p>
+        <ul>
+          <li>Email: example@example.com</li>
+          <li>Phone: +1234567890</li>
+          <li>Social Media: <a href="#">Twitter</a>, <a href="#">LinkedIn</a></li>
+        </ul>
+    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 1twodrei</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('a.details-link').on('click', function (event) {
+          event.preventDefault();
+          var target = $(this.hash);
+
+          if (target.length) {
+            $('html, body').animate(
+              {
+                scrollTop: target.offset().top,
+              },
+              2500, // Increase this value to make the scrolling slower
+              'easeInOutQuint'
+            );
+          }
+        });
+      });
+
+      // Add a custom easing function
+      $.extend($.easing, {
+        easeInOutQuint: function (x, t, b, c, d) {
+          if ((t /= d / 2) < 1) return (c / 2) * t * t * t * t * t + b;
+          return (c / 2) * ((t -= 2) * t * t * t * t + 2) + b;
+        },
+      });
+    </script>
+</html>
