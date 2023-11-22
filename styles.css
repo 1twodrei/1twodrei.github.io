@@ -122,6 +122,7 @@
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
   
   section {
@@ -204,13 +205,17 @@
   
   /* Project cards with border and texture */
   .project {
-    background-color: #131313;
+    opacity: 0;
+    background-color: #131313b5;
+    backdrop-filter: blur();
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     transition: transform 0.3s ease-in-out;
     border: 2px solid #555;
+    transform: translateX(50px);
+    
   }
   
   .project:hover {
@@ -252,7 +257,7 @@
       opacity: 0.7;
     }
     100% {
-      transform: translate(100vw, 100vh); /* Move off the screen */
+      transform: translate(120vw, 120vh); /* Move off the screen */
       opacity: 0; /* Fade out */
     }
   }
@@ -278,4 +283,10 @@
   
   #black-text {
     color: #fff;
+  }
+
+  .fade-in {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
   }
