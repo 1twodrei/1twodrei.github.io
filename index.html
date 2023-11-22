@@ -3,6 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <script src="script.js"></script>
+  <script>  document.addEventListener("DOMContentLoaded", function() {
+    const projects = document.querySelectorAll(".project");
+  
+    const options = {
+      threshold: 0.8 // Adjust as needed
+    };
+  
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+  
+    projects.forEach(project => {
+      observer.observe(project);
+    });
+  });
+  
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
@@ -33,20 +55,25 @@
         <h2 >About Me</h2>
         <p >Welcome to my  website! Welcome to my  website!</p>
         <p >Welcome to my  website! Welcome to my  website! Welcome to my  website!</p>
+        
       </div>
     </section>
   
-    <section id="projects" class="section">
-      <div class="container">
+
+
+      <div class="container" id="projects ">
         <h2>Projects</h2>
         <p>Here are a few of my highlighted projects:</p>
       </br>
+      
       <div class="project">
         <h3>CV</h3>
         <img src="Papirus-Team-Papirus-Places-Folder-blue-linux.png" height="110px" width="110px" class="image-position" />
          <p>(German Version)</p>
         <a href="#" class="button">View more</a>
       </div>
+    
+    </br>
         <div class="project">
             
           <h3>Bug Bounty</h3>
@@ -54,13 +81,16 @@
           <p>Description of Project 1...</p>
           <a href="#" class="button">View more</a>
         
-        </div>
+        
+      </div>
+    </br>
         <div class="project">
           <h3>CSS-WebStyler</h3>
           <img src="logo.png" height="110px" width="110px" class="image-position" />
             <p>Description of Project 2...</p>
           <a href="#" class="button">View more</a>
-        </div>
+        
+      </div>
         
         <!-- You can add more projects in a similar format -->
       </div>
@@ -117,3 +147,4 @@
       });
     </script>
 </html>
+
