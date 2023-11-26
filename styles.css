@@ -290,3 +290,13 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+  #profile {
+    position: absolute;
+  left: 0; 
+  top: 0; 
+  margin-left: 4.5%;
+  margin-top: 1.5%;
+  width: 65px;
+  height: 65px;
+  }
