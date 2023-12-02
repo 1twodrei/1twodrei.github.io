@@ -36,7 +36,7 @@ function createCircle() {
       circle.style.backgroundColor = currentColor;
 
       if (currentColor !== newColor) {
-        setTimeout(transitionColor, 30); //  transition speed  (higher values == slower transition)
+        setTimeout(transitionColor, 50); //  transition speed  (higher values == slower transition)
       }
     };
 
@@ -49,5 +49,5 @@ function createCircle() {
   pulsate();
 }
 
-setInterval(createCircle, 1500);
+setInterval(createCircle, 1400);
   
