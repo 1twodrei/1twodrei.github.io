@@ -264,4 +264,8 @@ button:hover {
 }
 
 
-
+@media (max-width: 768px) {
+  .container img {
+    display: none;
+  }
+}
