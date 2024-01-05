@@ -49,5 +49,5 @@ function createCircle() {
   pulsate();
 }
 
-setInterval(createCircle, 1400);
+setInterval(createCircle, 4400);
   
