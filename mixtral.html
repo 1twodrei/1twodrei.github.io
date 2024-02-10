@@ -2,95 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Example.com</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(90deg, #e8e5db, #e0dcdd, #e8e2d7, #e2ecda);
-            /* Updated background-image syntax */
-            background-size: cover; /* Added to cover the entire background */
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none; /* To remove iframe border */
-            display: none; /* Initially hide the iframe */
-        }
-        .error-message {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            /* Customize error message styles as needed */
-        }
-        .error-icon {
-            /* Customize error icon styles as needed */
-        }
-
-        .loader {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            display: none; /* Initially hide the loader */
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        #loading-svg {
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-        }
-
-        #loading-circle {
-            fill: none;
-            stroke: #0099ff;
-            stroke-width: 8;
-            stroke-dasharray: 164.93361431346415 56.97787143782138;
-            transform-origin: center;
-            animation: rotate 1s linear infinite;
-        }
-
-        @keyframes rotate {
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <meta http-equiv="refresh" content="5; url=https://2ecb42831e77c79e1c92ba8324959ff6.serveo.net">
+    <title>Redirecting...</title>
 </head>
 <body>
-    <iframe id="myIframe" src="https://2ecb42831e77c79e1c92ba8324959ff6.serveo.net" frameborder="0"></iframe>
-    <div class="error-message">
-        <!-- Add your error icon or image here -->
-        <svg id="loading-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-            <circle id="loading-circle" cx="50" cy="50" fill="none" stroke="#0099ff" stroke-width="8" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(100.932 50 50)">
-              <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
-              <animate attributeName="stroke" dur="4s" repeatCount="indefinite" values="#0099ff; #ff3366; #33cc33"></animate>
-            </circle>
-          </svg>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('myIframe').onload = function() {
-            document.getElementById('myIframe').style.display = 'block';
-            document.querySelector('.error-message').style.display = 'none';
-        };
-        document.getElementById('myIframe').onerror = function() {
-            document.getElementById('myIframe').style.display = 'none';
-            document.querySelector('.error-message').style.display = 'flex';
-        };
-    </script>
+    <p>This page is being redirected to <a href="https://2ecb42831e77c79e1c92ba8324959ff6.serveo.net">https://2ecb42831e77c79e1c92ba8324959ff6.serveo.net</a>.</p>
 </body>
 </html>
 
