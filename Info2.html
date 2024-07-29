@@ -1,0 +1,1847 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Info 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ff67d04d-da8c-482e-bab2-1afc762f5f17" class="page sans"><header><h1 class="page-title">Info 2</h1><p class="page-description"></p></header><div class="page-body"><hr id="30ed36ab-7207-4d27-aa6d-538501a1bdc7"/><p id="774fdd11-2803-4504-a85e-81417987f2f4" class="">
+</p><h2 id="ef82986d-918a-47d0-9452-6ac6178097f9" class="">Aufgabentypen:</h2><ul id="b6bd1447-aa89-47c1-9aae-7be5805b17dd" class="bulleted-list"><li style="list-style-type:disc">Klassenfragen (Funktion und Aufbau (+deren Methoden und Oberklassen etc.))<ul id="d232788a-7412-4b9c-8b48-43919e3377e2" class="bulleted-list"><li style="list-style-type:circle">Object</li></ul><ul id="5383e70c-07e7-4d05-991a-73d791bf776d" class="bulleted-list"><li style="list-style-type:circle">RuntimeException</li></ul><ul id="1ca9d6d0-8080-4f9a-a34d-ba91942d4f27" class="bulleted-list"><li style="list-style-type:circle">StringBuilder</li></ul><ul id="f15826e4-54f2-43f9-a312-e9f02bf3d7fa" class="bulleted-list"><li style="list-style-type:circle">Random</li></ul><ul id="5ea81ffa-f59f-4bd0-a53a-5e6884db5537" class="bulleted-list"><li style="list-style-type:circle">Compare</li></ul><ul id="4c168c6b-f661-461c-a7ae-4bbc5e48e2b6" class="bulleted-list"><li style="list-style-type:circle">Array</li></ul><ul id="c6d12927-c6ad-4dbc-91ba-7883de89b5c7" class="bulleted-list"><li style="list-style-type:circle">ArrayList</li></ul></li></ul><ul id="fb09417a-5245-4332-9fb7-3d520e2163d8" class="bulleted-list"><li style="list-style-type:disc">Kommandozeilenparameter einlesen<ul id="bdd636ef-776f-4d60-b03e-d43ea720c70b" class="bulleted-list"><li style="list-style-type:circle">Input interpretieren (z.B. als int oder ArrayList&lt;String&gt;)</li></ul><ul id="b00759f7-b5b0-4400-bf86-c942c9bbaae6" class="bulleted-list"><li style="list-style-type:circle">Bestimmte anzahl an parametern</li></ul></li></ul><ul id="21de346b-89a9-42c0-bc9f-ade47a88db63" class="bulleted-list"><li style="list-style-type:disc">Mathematiche grundlagen (Vektoren, Matrix, Binärumwandlung)</li></ul><ul id="64ecf99f-3b74-42a8-8aef-8acc25332d40" class="bulleted-list"><li style="list-style-type:disc">Exception-handeling</li></ul><ul id="7fc4c9fb-f2f1-4e74-a811-7e13656cdf07" class="bulleted-list"><li style="list-style-type:disc">Lambda Ausdrücke</li></ul><ul id="8023a4f9-e61d-402c-ac5f-7e6b95b45c2a" class="bulleted-list"><li style="list-style-type:disc">Streams &amp; deren Operationen</li></ul><ul id="cfbb858c-29c1-4cdb-8e37-f84644569329" class="bulleted-list"><li style="list-style-type:disc">Eigene Datenklassen erstellen</li></ul><ul id="56ecb093-cd1e-4287-a47b-6ffbb2e50248" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">Gui erstellen mit JFrame Jpanel grids Flowlayout JButton events mit adapterklassen actionlistener eventlistener für maus keyboard und buttons Message dialogs Color etc.</mark></li></ul><ul id="7cd6283b-d9ea-4ffb-a257-a45920dbcacb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange">UML-Klassendiagramm</mark></li></ul><ul id="85af6f38-b4b0-4cef-b95c-78d887e07ebf" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange">Sequenzdiagramm </mark><ul id="65517f37-5ae8-4a7d-bc3b-78e70214f70d" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-orange">aus Gui Konstruktor</mark></li></ul><ul id="f11cac95-c777-480d-97c2-3f8db3d20aaf" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-orange">Code mit threads → Sequenzdiagramm</mark></li></ul></li></ul><ul id="0f04322b-b0b7-4545-96e7-91ba0826712a" class="bulleted-list"><li style="list-style-type:disc">Schichtenarchitektur, SOLID-Prinzipien und Design Patterns<ul id="4299d63e-148f-4439-bede-d05350f469e9" class="bulleted-list"><li style="list-style-type:circle">Containerklassen</li></ul><ul id="42d60228-e94d-41e9-bb5e-9b8721a298cd" class="bulleted-list"><li style="list-style-type:circle">Singletonmuster</li></ul><ul id="040b007c-f3a7-4e19-b1b5-b1a25952ee01" class="bulleted-list"><li style="list-style-type:circle">Javabeans</li></ul><ul id="a31e413d-20d0-441b-b062-b66d73fd5482" class="bulleted-list"><li style="list-style-type:circle">Iteratormuster</li></ul><ul id="45165037-e5e4-41fd-96ea-e0ec0785af5e" class="bulleted-list"><li style="list-style-type:circle">Fragen zu SOLID-Prinzipien anhand von beispielen</li></ul></li></ul><ul id="9c2e08f7-f591-4769-a61c-8c5e6ab747ca" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">SQL</mark><mark class="highlight-orange"> (+ darstellung in klassendiagrammen) </mark></li></ul><ul id="0dc28006-d751-4b9f-85e7-c4887c9d3ba0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange">XML (+ darstellung in klassendiagrammen)</mark></li></ul><ul id="5144cc8d-413b-4686-801e-516ac9943e66" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange">JSON (+ darstellung in klassendiagrammen)</mark></li></ul><ul id="3c62f15a-0990-4a99-a80e-bd5858fae815" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">File operations</mark><ul id="12986068-fd14-4de0-bb19-f488be269d47" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">JFileChooser</mark></li></ul><ul id="e9b9b874-3e19-4be6-8afd-4dfe4eaf5028" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">BufferedReader</mark></li></ul><ul id="07021c80-d266-400c-aaee-d184d6a1a5a8" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">BufferedWriter</mark></li></ul><ul id="46f81da2-e627-48c2-a2c1-2a1b54ac0b65" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">Scanner</mark></li></ul><ul id="088b240a-bcab-44f3-8c5b-36ecaf8f4606" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">alle Ressourcen wieder freigeben</mark></li></ul><ul id="0afe5a16-2e57-46fe-81a9-0556948e9806" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Vermeidung von Speicherlecks</mark></li></ul></li></ul><ul id="c302613e-8898-4956-96ec-910d38a72805" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">Threads </mark><ul id="a6738e1f-d803-4e32-9240-51f2b44e99cc" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">Runnable</mark></li></ul><ul id="198dfb39-a5c1-4c57-8f39-2b12d43a08b3" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">Countdown Example<br/><br/></mark></li></ul><p id="5913b6e2-cec3-4f55-9713-702cffdbadbf" class="">
+</p></li></ul><p id="fa674e23-b4b3-403d-800d-78b54e27fc18" class=""><br/><br/></p><hr id="9d6a0a8b-3463-43d7-9ca6-10a9536614e1"/><p id="9904e595-f77f-4937-8c61-a7ed86562190" class="">
+</p><p id="0df38c67-b8c1-4696-ad48-1a4402652641" class="">
+</p><h3 id="c72484ae-4d02-4c68-9222-4232af49b0b7" class="">Klassenfragen</h3><h3 id="6edc859d-b68c-4e26-87a5-08353dc3ed62" class="">1. <code>Object</code></h3><p id="ac7d3273-ab1d-464c-a7f4-e0ce25f2d9b2" class="">Die Klasse <code>Object</code> ist die Superklasse aller Klassen in Java. Sie stellt grundlegende Methoden bereit, die alle Objekte haben.</p><ul id="935dd6be-1a22-4ba4-b452-a04244ec57bd" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="989afb45-9f61-4d3e-9650-d5fdb27a2e8b" class="bulleted-list"><li style="list-style-type:circle"><code>boolean equals(Object obj)</code></li></ul><ul id="ced63cbe-ce06-4005-8cde-0b976b11aee3" class="bulleted-list"><li style="list-style-type:circle"><code>String toString()</code></li></ul><ul id="c627bf38-a492-44b7-b8db-2e479670e688" class="bulleted-list"><li style="list-style-type:circle"><code>int hashCode()</code></li></ul><ul id="49ecace9-6032-4da8-807a-c5408fe50c16" class="bulleted-list"><li style="list-style-type:circle"><code>Object clone()</code></li></ul></li></ul><ul id="c89407c9-98e9-47a5-b5c0-04c43ab847cd" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b1a10022-4258-457c-80f6-8da4554ab2fe" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class MyObjectClass {
+    private int id;
+
+    public MyClass(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MyClass myClass = (MyClass) obj;
+        return id == myClass.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return &quot;MyClass{id=&quot; + id + &quot;}&quot;;
+    }
+}
+
+</code></pre></li></ul><h3 id="1eaeb192-b7b6-4f12-b9d1-537869eb9528" class="">2. <code>RuntimeException</code></h3><p id="5cb1b77f-c41f-4206-ae2b-bebb15b912d8" class=""><code>RuntimeException</code> ist die Oberklasse der Ausnahmebedingungen, die von der JVM zur Laufzeit ausgelöst werden können. (Ist Unterklasse von Exception)</p><ul id="85bfff48-71d7-481c-900d-db475561b9c6" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="ca2e9483-9209-46b3-8eb6-bf992b8b94be" class="bulleted-list"><li style="list-style-type:circle"><code>String getMessage()</code></li></ul><ul id="8416d9b9-2e44-432a-877a-ffb04015a1eb" class="bulleted-list"><li style="list-style-type:circle"><code>Throwable getCause()</code></li></ul><ul id="8a03fccd-745e-42a9-8bb9-a5fd835a9ef9" class="bulleted-list"><li style="list-style-type:circle"><code>void printStackTrace()</code></li></ul></li></ul><ul id="3c3c02d4-d02d-4cc2-b821-c541dae3d1fb" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c4431f57-b682-41ee-be17-2d576faed331" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class MyRuntimeException extends RuntimeException {
+    public MyRuntimeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            throw new MyRuntimeException(&quot;Custom Runtime Exception&quot;);
+        } catch (MyRuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+</code></pre></li></ul><h3 id="02bfedee-ae71-4ac5-8e56-f86d78f588de" class="">3. <code>StringBuilder</code></h3><p id="2cbd411c-ed86-4379-b8e4-a563d17500e0" class=""><code>StringBuilder</code> wird zum Erstellen von veränderbaren Zeichenfolgen verwendet.</p><ul id="179a8d88-b27b-4350-b808-045ff5f74f0e" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="7b79f307-1b3c-4f03-9502-cd2e6677e77e" class="bulleted-list"><li style="list-style-type:circle"><code>StringBuilder append(String str)</code></li></ul><ul id="dd3009a3-f989-4648-8612-0efdfefe0d7f" class="bulleted-list"><li style="list-style-type:circle"><code>StringBuilder insert(int offset, String str)</code></li></ul><ul id="122d2358-0d9a-4522-9463-7577446a8820" class="bulleted-list"><li style="list-style-type:circle"><code>StringBuilder delete(int start, int end)</code></li></ul><ul id="e0f18b07-8788-4d79-8952-8958631c3fd3" class="bulleted-list"><li style="list-style-type:circle"><code>String toString()</code></li></ul></li></ul><ul id="9098a5df-a789-4fba-844d-b5cfd0b13ccc" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="354cdaf3-ef4b-4483-bfa6-18c459dd7bbc" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class Main {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder(&quot;Hello&quot;);
+        sb.append(&quot; World&quot;);
+        sb.insert(5, &quot;,&quot;);
+        sb.delete(0, 1);
+        System.out.println(sb.toString()); // Output: ello, World
+    }
+}
+
+</code></pre></li></ul><h3 id="3eff3b88-3e33-4bb5-a8bf-c564161276d6" class="">4. <code>Random</code></h3><p id="7174d4b2-3e2c-4a7b-b053-5b07ca5ba7b2" class="">Die Klasse <code>Random</code> generiert Pseudozufallszahlen.</p><ul id="5c8081cb-95bb-4cbc-9526-ce62d949315b" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="ff30d09f-cf89-402e-ba5f-adc4a1edd6e4" class="bulleted-list"><li style="list-style-type:circle"><code>int nextInt()</code></li></ul><ul id="35c958d6-e304-4913-afda-0e602c714ae5" class="bulleted-list"><li style="list-style-type:circle"><code>int nextInt(int bound)</code></li></ul><ul id="7a3944f0-97d3-4f9c-adf6-b37cfa9f0817" class="bulleted-list"><li style="list-style-type:circle"><code>double nextDouble()</code></li></ul><ul id="cb0ced74-32d2-4961-8782-e5fe9e0d4ce1" class="bulleted-list"><li style="list-style-type:circle"><code>boolean nextBoolean()</code></li></ul></li></ul><ul id="40df7ac1-0dd2-4f42-9dc7-0cdf3bc5dfd2" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="db7e1add-1c83-4a45-a852-e9105c765f64" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        System.out.println(random.nextInt()); // Zufällige Ganzzahl
+        System.out.println(random.nextInt(10)); // Zufällige Ganzzahl zwischen 0 und 9
+        System.out.println(random.nextDouble()); // Zufällige Gleitkommazahl zwischen 0.0 und 1.0
+        System.out.println(random.nextBoolean()); // Zufälliger Wahrheitswert
+    }
+}
+
+</code></pre></li></ul><h3 id="f7d1a4f5-e463-4c47-ab9e-4e9a01bdd960" class="">5. <code>Comparable</code></h3><p id="edd861db-4ec5-45cb-87c1-6eef65d9d939" class="">Das Interface <code>Comparable</code> wird zum Vergleich von Objekten verwendet.</p><ul id="1b56672a-fdba-47ea-8cb9-733cc5c28226" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="089b7c6f-bbe8-4ac8-b750-a51a456c1ff2" class="bulleted-list"><li style="list-style-type:circle"><code>int compareTo(T o)</code></li></ul></li></ul><ul id="588f610b-235f-4eca-9f25-166b92a2a754" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c67a19ed-3a64-42fc-a058-5d722ea2fafb" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class Person implements Comparable&lt;Person&gt; {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return Integer.compare(this.age, other.age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;Person&gt; people = new ArrayList&lt;&gt;();
+        people.add(new Person(&quot;Alice&quot;, 30));
+        people.add(new Person(&quot;Bob&quot;, 25));
+        Collections.sort(people);
+        for (Person p : people) {
+            System.out.println(p.name + &quot;: &quot; + p.age);
+        }
+    }
+}
+
+</code></pre></li></ul><h3 id="f5e16b28-1dce-42ce-879b-03c8a2ffbbbb" class="">6. <code>Array</code></h3><p id="331dec20-9fce-49f2-82a9-2f390a3b16ab" class="">Ein <code>Array</code> ist ein Containerobjekt, das eine feste Anzahl von Werten eines einzelnen Typs speichert.</p><ul id="dde4c650-2b0a-45ae-b061-7090e409246c" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b1b96868-1dc3-43c5-8f57-ae061ec26e4c" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[5];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
+        numbers[3] = 4;
+        numbers[4] = 5;
+
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
+
+</code></pre></li></ul><h3 id="19068064-5e34-4c34-9e80-0254a2ac89c0" class="">7. <code>ArrayList</code></h3><p id="252d02a6-3841-47fe-b75a-4c8e1186f3bd" class=""><code>ArrayList</code> ist eine veränderbare Liste, die automatisch wächst.</p><ul id="cb1e5e38-78c2-406b-b13c-afdc54371666" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden:</strong><ul id="486d4b3c-91ca-4473-b7bf-f34e6e365e0f" class="bulleted-list"><li style="list-style-type:circle"><code>boolean add(E e)</code></li></ul><ul id="85af9f8e-c5af-46f4-96ae-231a5dd1af30" class="bulleted-list"><li style="list-style-type:circle"><code>E get(int index)</code></li></ul><ul id="2ffda6a3-b1f3-4a57-846d-b085b9e9df7e" class="bulleted-list"><li style="list-style-type:circle"><code>E remove(int index)</code></li></ul><ul id="8d5473bb-50c3-4cd4-a67d-856fab88d0a5" class="bulleted-list"><li style="list-style-type:circle"><code>int size()</code></li></ul></li></ul><ul id="8e9091b6-3b43-4a04-a03f-68c639335ba2" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="06f7fb06-e223-46ab-9857-738b89c50fe6" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;A&quot;);
+        list.add(&quot;B&quot;);
+        list.add(&quot;C&quot;);
+
+        System.out.println(list.get(1)); // Output: B
+
+        list.remove(1);
+
+        for (String s : list) {
+            System.out.println(s);
+        }
+    }
+}
+
+</code></pre></li></ul><p id="8b2342a7-adfc-4edd-b921-aaf9decae54b" class="">
+</p><h3 id="63c311ed-712e-4309-a2c0-0c6b22804d3e" class="">Erweiterte Methoden und Konstrukte in Java</h3><p id="63caa1f6-6cab-4ce4-9d6e-6bca6a0f8aae" class="">Zusätzlich zu den grundlegenden Methoden, die in der vorherigen Lernübersicht beschrieben wurden, gibt es erweiterte Methoden und Konstrukte wie <code>forEach</code>, <code>removeIf</code> und andere, die besonders nützlich in der Arbeit mit Kollektionen sind.</p><h3 id="0e845bd0-b1b3-4fa1-8507-9d2abd831136" class=""><code>forEach</code></h3><p id="3bb72add-1d95-491e-a795-a2614a94e345" class=""><code>forEach</code> ist eine Methode, die in vielen Klassen des <code>java.util</code>-Pakets verfügbar ist, insbesondere in den Klassen, die das <code>Iterable</code>-Interface implementieren (z.B. <code>ArrayList</code>, <code>HashSet</code>). Diese Methode ermöglicht es, eine bestimmte Operation auf jedes Element der Sammlung auszuführen.</p><ul id="b5188dc2-9cef-40c4-a316-ec4d94fff112" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="728c34da-ffff-4329-a92f-60acce401fd5" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;A&quot;);
+        list.add(&quot;B&quot;);
+        list.add(&quot;C&quot;);
+
+        // Verwendung von forEach mit einer Lambda-Ausdruck
+        list.forEach(element -&gt; System.out.println(element));
+    }
+}
+
+</code></pre></li></ul><h3 id="3f66700d-e549-4db0-9616-f02a496133ba" class=""><code>removeIf</code></h3><p id="e294271f-27bf-45cd-a1f1-86d4d5600012" class=""><code>removeIf</code> ist eine Methode, die es ermöglicht, Elemente aus einer Sammlung zu entfernen, die einer bestimmten Bedingung entsprechen. Diese Methode verwendet eine <code>Predicate</code>-Schnittstelle, die eine Bedingung als Lambda-Ausdruck oder Methodenreferenz akzeptiert.</p><ul id="49bdadb8-7c05-4b3c-a2ea-8adfa6e32779" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="aba8045c-7ccc-4485-98f8-2500ce0d5ab2" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;Apple&quot;);
+        list.add(&quot;Banana&quot;);
+        list.add(&quot;Cherry&quot;);
+
+        // Entfernt alle Elemente, die mit &#x27;B&#x27; beginnen
+        list.removeIf(element -&gt; element.startsWith(&quot;B&quot;));
+
+        list.forEach(element -&gt; System.out.println(element));
+        // Output: Apple, Cherry
+    }
+}
+
+</code></pre></li></ul><h3 id="6086cd2b-cffc-4b1a-a258-b0ef637bea79" class="">Weitere wichtige Methoden</h3><h3 id="cf39ce11-a519-4bd7-a31f-355f853e98e3" class=""><code>stream</code></h3><p id="a16fffcb-129c-4e12-8afe-553625b1c1e1" class="">Streams bieten eine Möglichkeit, auf deklarative Weise mit Sammlungen zu arbeiten, indem sie Methoden wie <code>filter</code>, <code>map</code>, <code>collect</code> und andere verwenden. Streams sind Teil der Java Stream API, die mit Java 8 eingeführt wurde.</p><ul id="8bc57a88-6605-4867-b272-2c4f9476343f" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="506e815b-4e2f-4606-a29e-da020a002de9" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;Apple&quot;);
+        list.add(&quot;Banana&quot;);
+        list.add(&quot;Cherry&quot;);
+
+        // Filtert die Liste und sammelt nur die Elemente, die mit &#x27;A&#x27; beginnen
+        List&lt;String&gt; filteredList = list.stream()
+                                        .filter(element -&gt; element.startsWith(&quot;A&quot;))
+                                        .collect(Collectors.toList());
+
+        filteredList.forEach(element -&gt; System.out.println(element));
+        // Output: Apple
+    }
+}
+
+</code></pre></li></ul><h3 id="ac4552fc-64b4-4046-b961-7f1f7f594ae2" class=""><code>map</code></h3><p id="e7cf8b7c-ecb2-4625-aed8-5fa0885e9cde" class="">Die Methode <code>map</code> wird verwendet, um Elemente eines Streams in eine andere Form zu transformieren. Sie nimmt eine Funktion als Parameter, die auf jedes Element angewendet wird.</p><ul id="9a7e222b-97b8-4181-ae27-b6ba483d6ffd" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3c479275-68b6-4d0a-b01d-c2f847af8810" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;apple&quot;);
+        list.add(&quot;banana&quot;);
+        list.add(&quot;cherry&quot;);
+
+        // Konvertiert jedes Element in Großbuchstaben
+        List&lt;String&gt; upperCaseList = list.stream()
+                                         .map(String::toUpperCase)
+                                         .collect(Collectors.toList());
+
+        upperCaseList.forEach(element -&gt; System.out.println(element));
+        // Output: APPLE, BANANA, CHERRY
+    }
+}
+
+</code></pre></li></ul><h3 id="55ec3df1-679a-4c1b-82d3-c1659772df60" class=""><code>filter</code></h3><p id="e31c6dfd-b459-4c33-a8d6-fcf3ceec4af8" class="">Die Methode <code>filter</code> wird verwendet, um Elemente eines Streams basierend auf einer Bedingung zu filtern. Sie nimmt ein <code>Predicate</code> als Parameter.</p><ul id="1c9ff312-20d1-4aac-bfe9-a03c45dd7cd1" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="98fe1592-c3d9-4a19-95e7-531034c52f45" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;apple&quot;);
+        list.add(&quot;banana&quot;);
+        list.add(&quot;cherry&quot;);
+
+        // Filtert die Liste und behält nur die Elemente, die mehr als 5 Zeichen haben
+        List&lt;String&gt; longWords = list.stream()
+                                     .filter(element -&gt; element.length() &gt; 5)
+                                     .collect(Collectors.toList());
+
+        longWords.forEach(element -&gt; System.out.println(element));
+        // Output: banana, cherry
+    }
+}
+
+</code></pre></li></ul><h3 id="ee598f01-019b-4f50-bf04-da0d23f0c163" class="">Zusammenfassung</h3><p id="151d4c3a-26b8-402d-bfcf-c8c2c1e3cff9" class="">Diese erweiterten Methoden und Konstrukte bieten eine leistungsfähige und ausdrucksstarke Möglichkeit, mit Kollektionen in Java zu arbeiten. <code>forEach</code> und <code>removeIf</code> sind besonders nützlich für das Arbeiten mit Sammlungen, während Streams und ihre Methoden wie <code>map</code>, <code>filter</code> und <code>collect</code> eine deklarative Programmierung ermöglichen. Diese Konzepte sind entscheidend für das Verständnis moderner Java-Programmierung und sollten gründlich verstanden und geübt werden.</p><p id="a213c254-7835-4d10-8006-9f6fe9479a57" class="">
+</p><p id="75fa64d2-602c-4df8-b2a8-89cafa9a461b" class=""><strong>Kommandozeilenparameter einlesen</strong></p><p id="280c21cf-a60d-4aee-862e-c8a6be87fdb7" class="">Java bietet verschiedene Möglichkeiten, um Argumente von der Kommandozeile zu lesen:</p><ul id="b101aacf-7b9a-4f4a-83da-95464af92e96" class="bulleted-list"><li style="list-style-type:disc"><code><strong>String[] args</strong></code><strong> in der </strong><code><strong>main</strong></code><strong>Methode:</strong><ul id="fe032a29-e32e-48a6-87d9-3230f9d5d537" class="bulleted-list"><li style="list-style-type:circle">Standardmethode, args enthält alle übergebenen Parameter als Strings</li></ul><ul id="0e455a1f-057d-44d8-99d0-f095edb65848" class="bulleted-list"><li style="list-style-type:circle">Zugriff mit <code>args[index]</code>, wobei <code>index</code> von 0 beginnt</li></ul><ul id="4fd19985-f364-4e74-845c-ab199465f46b" class="bulleted-list"><li style="list-style-type:circle">Beispiel: <code>java MeinProgramm dateiname.txt zahl 10</code> -&gt; <code>args[0] = &quot;dateiname.txt&quot;</code></li></ul></li></ul><ul id="4ab03f66-7abe-4c7d-a23b-1cfce56cb01d" class="bulleted-list"><li style="list-style-type:disc"><code><strong>java.util.Scanner</strong></code><strong>:</strong><ul id="450e3536-abd5-4de7-a935-9fb05b6d3684" class="bulleted-list"><li style="list-style-type:circle">Flexiblere Methode zum Einlesen verschiedener Datentypen</li></ul><ul id="bc6be572-38fd-438f-9d26-e4a4ebc65693" class="bulleted-list"><li style="list-style-type:circle">Scanner-Objekt mit <code>System.in</code> initialisieren</li></ul><ul id="4fc00652-e6c0-413e-b5ed-49c8e422bfab" class="bulleted-list"><li style="list-style-type:circle">Mit Methoden wie <code>nextInt()</code> oder <code>nextLine()</code> Daten lesen</li></ul><ul id="58c3af35-8faa-4734-aee5-2c94cfcd5abe" class="bulleted-list"><li style="list-style-type:circle">Beispiel:<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fde5fbeb-7cbb-46ae-aa4b-73aa003983f2" class="code"><code class="language-Java">Scanner scanner = new Scanner(System.in);
+System.out.print(&quot;Zahl eingeben: &quot;);
+int zahl = scanner.nextInt();
+System.out.print(&quot;Zeichenkette eingeben: &quot;);
+String zeichenkette = scanner.nextLine();</code></pre></li></ul></li></ul><p id="041fe5b2-6e81-4456-ac24-5f113d7940e4" class="">
+</p><p id="1700d456-0e17-484f-a336-724910c3ae1b" class=""><strong>Datentypen interpretieren</strong></p><p id="0d149fa0-8de8-4724-908d-3a56d6dbace8" class="">Je nach Datentyp muss der String aus <code>args</code> entsprechend konvertiert werden:</p><ul id="47d9210c-ec1c-48b6-af40-8ffe1f980ce3" class="bulleted-list"><li style="list-style-type:disc"><code><strong>int</strong></code><strong>:</strong><ul id="bdbd3814-8187-41ec-82e4-5fb4db50995b" class="bulleted-list"><li style="list-style-type:circle"><code>Integer.parseInt(args[index])</code></li></ul></li></ul><ul id="3fc6a37d-e8ac-4b9b-bd9f-4ddd26e185dd" class="bulleted-list"><li style="list-style-type:disc"><code><strong>double</strong></code><strong>:</strong><ul id="6c69699f-b4df-4873-8c9c-77da808789df" class="bulleted-list"><li style="list-style-type:circle"><code>Double.parseDouble(args[index])</code></li></ul></li></ul><ul id="7cf07a7b-e52f-4c72-b2c2-dcd1ff23cd61" class="bulleted-list"><li style="list-style-type:disc"><code><strong>boolean</strong></code><strong>:</strong><ul id="6c71d362-ae84-4e78-baa1-b99df9ad3cf8" class="bulleted-list"><li style="list-style-type:circle"><code>Boolean.parseBoolean(args[index])</code></li></ul><ul id="8625b06f-601a-4252-af02-0aa2d4e35ad4" class="bulleted-list"><li style="list-style-type:circle">Akzeptiert &quot;true&quot; oder &quot;false&quot;, Groß-/Kleinschreibung ignorieren</li></ul></li></ul><ul id="027a9929-4984-4a42-b093-d0f908056b9a" class="bulleted-list"><li style="list-style-type:disc"><code><strong>String</strong></code><strong>:</strong><ul id="35f3ebcd-74fc-464c-8067-d7851f300409" class="bulleted-list"><li style="list-style-type:circle">String bereits in <code>args[index]</code> vorhanden</li></ul></li></ul><ul id="ad6a433d-ab71-4f91-85b8-395923e75db8" class="bulleted-list"><li style="list-style-type:disc"><code><strong>ArrayList&lt;String&gt;</strong></code><strong>:</strong><ul id="8d92ac6e-53ba-49a7-a315-6267d981bef4" class="bulleted-list"><li style="list-style-type:circle">Manuelle Umwandlung mit Schleife</li></ul><ul id="3a4358b0-46d8-4088-9c5c-acce47ad7a94" class="bulleted-list"><li style="list-style-type:circle">Beispiel:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="35b06d77-2182-41ff-8ab5-bbc817436bed" class="code"><code class="language-Java">ArrayList&lt;String&gt; liste = new ArrayList&lt;&gt;();
+for (int i = 0; i &lt; args.length; i++) {
+    liste.add(args[i]);
+}</code></pre></li></ul><p id="8b4c3c46-be3a-4234-bacf-07dca0468974" class="">
+</p><p id="59b21c82-e874-4c11-b556-5d13d89e7565" class=""><strong>Feste Anzahl an Parametern festlegen</strong></p><ul id="254e8897-9c90-49db-bebb-17d211aa7c10" class="bulleted-list"><li style="list-style-type:disc">mit <code>args.length == n</code> bestimmen</li></ul><p id="e06231b2-8f02-45d0-acaf-9e82e43f8baa" class="">
+</p><h3 id="de3d41cb-da6c-45a9-9ea9-644cd2c15f98" class="">Vektoren, Matrizen und Binärumwandlung</h3><h3 id="2a1e7343-c385-4a6d-89b5-3f07e6f5cbec" class="">1. Vektoren</h3><p id="d07bb93e-3b82-49f3-8110-81a1ceaf48d9" class="">In Java werden Vektoren häufig durch die Klasse <code>ArrayList</code> oder <code>Vector</code> dargestellt. Beide Klassen implementieren die List-Schnittstelle, wobei <code>Vector</code> synchronisiert ist und daher thread-sicher.</p><ul id="033c36de-57be-4cce-bf34-5c0670b30a1e" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden von </strong><code><strong>ArrayList</strong></code><strong>:</strong><ul id="80be0485-9d63-44f2-9d6d-018bb397f332" class="bulleted-list"><li style="list-style-type:circle"><code>boolean add(E e)</code></li></ul><ul id="27a7e108-6240-4208-ba3a-bb220a15e929" class="bulleted-list"><li style="list-style-type:circle"><code>E get(int index)</code></li></ul><ul id="2cbdab7c-cac7-4aca-be65-cccaa050b3e9" class="bulleted-list"><li style="list-style-type:circle"><code>E remove(int index)</code></li></ul><ul id="7c83c8f1-eeab-4490-a6ff-c0f9aa537f67" class="bulleted-list"><li style="list-style-type:circle"><code>int size()</code></li></ul></li></ul><ul id="e7e3bc33-6783-48e1-afcb-a36a8c0e53c8" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel mit </strong><code><strong>ArrayList</strong></code><strong>:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bf7c3d12-6019-4939-a119-a77e31eae32e" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+import java.util.ArrayList;
+
+public class VectorExample {
+    public static void main(String[] args) {
+        ArrayList&lt;Integer&gt; vector = new ArrayList&lt;&gt;();
+        vector.add(1);
+        vector.add(2);
+        vector.add(3);
+
+        System.out.println(&quot;Element at index 1: &quot; + vector.get(1)); // Output: 2
+
+        vector.remove(1);
+
+        System.out.println(&quot;Vector size after removal: &quot; + vector.size()); // Output: 2
+
+        for (int element : vector) {
+            System.out.println(element); // Output: 1, 3
+        }
+    }
+}
+
+</code></pre></li></ul><h3 id="4e9ae631-eda1-463d-9c86-6b0c0a62e0d6" class="">2. Matrizen</h3><p id="9b465e16-c40d-4043-88a6-c1688156d591" class="">Matrizen können in Java durch zweidimensionale Arrays dargestellt werden. Hier wird die Speicherung und der Zugriff auf Elemente einer Matrix demonstriert.</p><ul id="5d899167-2224-445b-8dac-9303eb342770" class="bulleted-list"><li style="list-style-type:disc"><strong>Speicherung und Zugriff auf Matrizen:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="dca2ca37-a802-4bbb-8d36-275ecf245eb7" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+public class MatrixExample {
+    public static void main(String[] args) {
+        // Initialisierung einer 3x3 Matrix
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Zugriff auf ein Element der Matrix
+        System.out.println(&quot;Element at (1, 1): &quot; + matrix[1][1]); // Output: 5
+
+        // Ändern eines Elements der Matrix
+        matrix[1][1] = 10;
+
+        // Ausgabe der gesamten Matrix
+        for (int i = 0; i &lt; matrix.length; i++) {
+            for (int j = 0; j &lt; matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + &quot; &quot;);
+            }
+            System.out.println();
+        }
+        // Output:
+        // 1 2 3
+        // 4 10 6
+        // 7 8 9
+    }
+}
+
+</code></pre></li></ul><h3 id="0f5ab879-7d78-420b-abca-993a52525c42" class="">3. Binärumwandlung</h3><p id="dd5153d8-929d-4cbe-9374-8d51fa5aec76" class="">Die Binärumwandlung in Java kann mit Hilfe der Klasse <code>Integer</code> durchgeführt werden, die Methoden zur Konvertierung von Dezimalzahlen in Binärzahlen und umgekehrt bietet.</p><ul id="dc04f168-3729-48aa-9d13-1399689abd21" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Methoden der Klasse </strong><code><strong>Integer</strong></code><strong>:</strong><ul id="57b445d3-52f8-4e8b-835a-665577c693b6" class="bulleted-list"><li style="list-style-type:circle"><code>static String toBinaryString(int i)</code> (gibt auch <code>toOctalString</code> …)</li></ul><ul id="3bc47411-dc08-4d8f-bca1-726abadea438" class="bulleted-list"><li style="list-style-type:circle"><code>static int parseInt(String s, int radix)</code></li></ul></li></ul><ul id="148d9b58-6219-4534-94fa-6406f9bfe6e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel für Binärumwandlung:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="49e048bb-5609-438a-aad4-1b94eb89445d" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+public class BinaryConversionExample {
+    public static void main(String[] args) {
+        int number = 42;
+        String binaryString = Integer.toBinaryString(number);
+        System.out.println(&quot;Binary representation of 42: &quot; + binaryString); // Output: 101010
+
+        String binary = &quot;101010&quot;;
+        int decimal = Integer.parseInt(binary, 2);
+        System.out.println(&quot;Decimal representation of 101010: &quot; + decimal); // Output: 42
+    }
+}
+
+</code></pre></li></ul><p id="03d79c78-b9ce-4c1e-ae1b-d79d4e3b1817" class="">
+</p><p id="0a512dc4-7cfc-4173-8cd9-613cde5fc257" class="">
+</p><h3 id="34996e7b-ed93-47e8-b42d-7c1d3e0e72af" class="">1. Exception-Handling</h3><p id="48a7633d-e70f-4680-bd3e-f19e0bf224fc" class="">Exception-Handling in Java ermöglicht es, Laufzeitfehler zu erkennen und darauf zu reagieren, ohne dass das Programm abrupt beendet wird. Es gibt zwei Haupttypen von Exceptions: Checked Exceptions und Unchecked Exceptions.</p><ul id="52c389f6-a84f-4330-85f6-0ddb68002192" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Konzepte:</strong><ul id="f1b97a4c-5755-462e-aaab-b805ec249aea" class="bulleted-list"><li style="list-style-type:circle"><code>trycatch</code>Blöcke</li></ul><ul id="b61d518f-9d63-4eb9-b24f-0c6605ad92d4" class="bulleted-list"><li style="list-style-type:circle"><code>finally</code>Block</li></ul><ul id="caf1b88a-562b-4eca-9c2a-e9bb09ba7804" class="bulleted-list"><li style="list-style-type:circle">Eigene Ausnahme erstellen (<code>extends Exception</code> oder <code>extends RuntimeException</code>)</li></ul></li></ul><ul id="3a6f6235-bbdb-44fd-8fd2-97c846dc2621" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7d99439f-ad6e-4a89-b306-051a322a199e" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println(&quot;Result: &quot; + result);
+        } catch (ArithmeticException e) {
+            System.err.println(&quot;Error: Division by zero!&quot;);
+        } finally {
+            System.out.println(&quot;This block is always executed.&quot;);
+        }
+    }
+
+    public static int divide(int a, int b) throws ArithmeticException {
+        return a / b;
+    }
+}
+
+</code></pre></li></ul><h3 id="11fb71cf-0925-418e-8e13-e0e12140a313" class="">2. Lambda-Ausdrücke</h3><p id="94e5d816-9286-4bfa-ad31-dd81c4d64bd7" class="">Lambda-Ausdrücke in Java sind eine Möglichkeit, anonyme Methoden zu schreiben. Sie ermöglichen eine klarere und prägnantere Syntax, insbesondere beim Umgang mit funktionalen Schnittstellen.</p><ul id="3570067c-cc93-475d-aa46-01439421f5ab" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Konzepte:</strong><ul id="96fb0abe-e47f-4f38-ac37-9041ef869ae6" class="bulleted-list"><li style="list-style-type:circle">Syntax: <code>(parameters) -&gt; expression</code> oder <code>(parameters) -&gt; { statements }</code></li></ul><ul id="2432fb16-0c09-45c1-8710-54f0c463498f" class="bulleted-list"><li style="list-style-type:circle">Funktionale Schnittstellen (z.B. <code>Runnable</code>, <code>Callable</code>, <code>Comparator</code>)</li></ul></li></ul><ul id="1f8c5cf0-fdc4-4e2e-919b-658859454a14" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="38bbdaa8-128c-4fbe-87bd-4f2a79daabbc" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.Arrays;
+import java.util.List;
+
+public class LambdaExample {
+    public static void main(String[] args) {
+        List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;);
+
+        // Verwendung von Lambda-Ausdrücken
+        names.forEach(name -&gt; System.out.println(name));
+
+        // Mit funktionaler Schnittstelle
+        Thread thread = new Thread(() -&gt; System.out.println(&quot;Hello from a thread!&quot;));
+        thread.start();
+    }
+}
+
+</code></pre></li></ul><h3 id="acd20b18-b6d7-48c3-9a06-41459fc7ecb5" class="">3. Streams &amp; deren Operationen</h3><p id="3bd0ce4d-a2c0-4b84-8c17-baed5540faee" class="">Die Stream-API bietet eine moderne Methode zur Verarbeitung von Sammlungen und Arrays. Streams unterstützen eine Vielzahl von Operationen wie Filterung, Mapping und Reduktion.</p><ul id="911919c5-9a5c-4038-86d5-ad0a6837edb6" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Operationen:</strong><ul id="2e98d369-3c00-4942-b822-95459fad2fa6" class="bulleted-list"><li style="list-style-type:circle"><code>filter(Predicate&lt;? super T&gt; predicate)</code></li></ul><ul id="e2a778c6-6bf2-469b-b742-070b2c2b63b9" class="bulleted-list"><li style="list-style-type:circle"><code>map(Function&lt;? super T, ? extends R&gt; mapper)</code></li></ul><ul id="0844e51a-b653-4e94-acdf-4d9238a30891" class="bulleted-list"><li style="list-style-type:circle"><code>collect(Collector&lt;? super T, A, R&gt; collector)</code></li></ul></li></ul><ul id="b9495c45-9163-4eff-a7ce-3dee12bb7987" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="85a9b57f-70aa-4846-b822-361126d9a8de" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamExample {
+    public static void main(String[] args) {
+        List&lt;String&gt; names = Arrays.asList(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;David&quot;);
+
+        // Filtern und Sammeln
+        List&lt;String&gt; filteredNames = names.stream()
+                                          .filter(name -&gt; name.startsWith(&quot;A&quot;))
+                                          .collect(Collectors.toList());
+
+        filteredNames.forEach(System.out::println); // Output: Alice
+
+        // Mapping und Sammeln
+        List&lt;String&gt; upperCaseNames = names.stream()
+                                           .map(String::toUpperCase)
+                                           .collect(Collectors.toList());
+
+        upperCaseNames.forEach(System.out::println); // Output: ALICE, BOB, CHARLIE, DAVID
+    }
+}
+
+</code></pre></li></ul><h3 id="f6635b74-30cd-4db9-96ff-5b5412762eb7" class="">4. Eigene Datenklassen erstellen</h3><p id="9b8ca89e-d0da-4563-afbf-af72e5f872e6" class="">Eigene Datenklassen enthalten Felder, Konstruktoren, Getter und Setter, sowie überschriebenen Methoden wie <code>toString</code>, <code>equals</code> und <code>hashCode</code>.</p><ul id="a18593d6-0eb3-4324-b759-de39381a746d" class="bulleted-list"><li style="list-style-type:disc"><strong>Wichtige Konzepte:</strong><ul id="1081939b-58ed-4547-9ffd-f1aae5eafee1" class="bulleted-list"><li style="list-style-type:circle">Felder und Konstruktoren</li></ul><ul id="b21dfe1e-4940-4e29-a299-e8f5f7b47604" class="bulleted-list"><li style="list-style-type:circle">Getter und Setter</li></ul><ul id="9f62bb91-ada0-4668-9839-0db2ddb16e47" class="bulleted-list"><li style="list-style-type:circle">Überschreiben von <code>toString()</code>, <code>equals(Object obj)</code> und <code>hashCode()</code></li></ul></li></ul><ul id="b53ffb68-0c7c-4065-b315-9ecf75470e30" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1ea5523b-9b57-45c4-a0e6-8c4628028769" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Person{name=&#x27;&quot; + name + &quot;&#x27;, age=&quot; + age + &quot;}&quot;;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &amp;&amp; Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person(&quot;Alice&quot;, 30);
+        Person person2 = new Person(&quot;Bob&quot;, 25);
+
+        System.out.println(person1);
+        System.out.println(person2);
+
+        // Vergleich von Personen
+        System.out.println(person1.equals(person2)); // Output: false
+    }
+}
+
+</code></pre></li></ul><p id="69c71318-f554-4403-b7b7-0998f4b1ddc0" class="">
+</p><p id="2b9839a4-080a-43ed-8ab7-77d85ff3f41a" class="">
+</p><h3 id="2d56ceec-78b9-44eb-a48b-1ed6211a9721" class="">Java Fenster </h3><hr id="088d893c-cffc-4f2a-bab4-819a4621deeb"/><ul id="ed6e587e-4a04-4c8b-8df7-61856da50f82" class="bulleted-list"><li style="list-style-type:disc"><strong>Java Swing</strong>: <mark class="highlight-orange"><code>import </code></mark><mark class="highlight-gray"><code>javax.swing.*;</code></mark><ul id="daead648-1702-40b3-9c00-856fb391a048" class="bulleted-list"><li style="list-style-type:circle"><strong>JFrame</strong>: Das Hauptfenster.</li></ul><ul id="63bb3903-c8f9-40ef-bb6b-e684fa5c3a0a" class="bulleted-list"><li style="list-style-type:circle"><strong>JPanel</strong>: Ein Container zur Gruppierung von Komponenten.</li></ul><ul id="a4ac41f1-a616-460f-a11e-9093feaeb52b" class="bulleted-list"><li style="list-style-type:circle"><strong>JButton</strong>: Ein Knopf, auf den der Benutzer klicken kann.</li></ul><ul id="c044a761-5fa4-478d-8d75-db06c244cfb7" class="bulleted-list"><li style="list-style-type:circle"><strong>JLabel</strong>: Ein einfaches Textlabel, das nicht interaktiv ist.</li></ul><ul id="0912e6cb-12f2-4ad8-819a-bcf82af909b0" class="bulleted-list"><li style="list-style-type:circle"><strong>JTextField</strong>: Ein Eingabefeld für einzeiligen Text.</li></ul><ul id="64ccbada-9698-4938-9c20-c580bdd0934c" class="bulleted-list"><li style="list-style-type:circle"><strong>JTextArea</strong>: Ein Eingabefeld für mehrzeiligen Text.</li></ul><ul id="16e6a846-e4ea-40d0-8a6e-b65dc8a4fb62" class="bulleted-list"><li style="list-style-type:circle"><strong>JCheckBox</strong>: Eine Auswahlbox, die angekreuzt oder nicht angekreuzt sein kann.</li></ul><ul id="114d3b31-b67e-40e6-88ea-915d00ed37a6" class="bulleted-list"><li style="list-style-type:circle"><strong>JRadioButton</strong>: Ein Knopf, der Teil einer Gruppe ist, von der nur einer ausgewählt werden kann.</li></ul><ul id="5de65c2d-2791-4039-9321-fa70f2459d10" class="bulleted-list"><li style="list-style-type:circle"><strong>JMenuBar</strong>: Eine Menüleiste, die Menüs enthält.</li></ul><ul id="15c1af43-4238-4992-89ae-39499c900080" class="bulleted-list"><li style="list-style-type:circle"><strong>JMenu</strong>: Ein Menü innerhalb der Menüleiste.</li></ul><ul id="984a1645-dd9a-43aa-abaf-04c914f802f3" class="bulleted-list"><li style="list-style-type:circle"><strong>JMenuItem</strong>: Ein Eintrag innerhalb eines Menüs.</li></ul><ul id="2f3dd428-c917-4696-b2c9-f9273e19ef3b" class="bulleted-list"><li style="list-style-type:circle"><strong>JScrollPane</strong>: Ein Container, der Rollbalken enthält, um den Inhalt zu scrollen.</li></ul><ul id="8bb9304f-3915-46d9-bbce-6d104ee456c1" class="bulleted-list"><li style="list-style-type:circle"><strong>JList</strong>: Eine Liste von Elementen, aus der der Benutzer eine Auswahl treffen kann.</li></ul><ul id="0c306a4f-8cd3-418d-9f4a-ba81f69a5ee8" class="bulleted-list"><li style="list-style-type:circle"><strong>JTable</strong>: Eine Tabelle zur Darstellung von Daten in einem Rasterformat.</li></ul><ul id="945727f2-a481-4237-98e2-588e38f52172" class="bulleted-list"><li style="list-style-type:circle"><strong>JToolBar</strong>: Eine Werkzeugleiste mit häufig verwendeten Aktionen oder Tools.</li></ul><ul id="8cfc433b-d281-4196-8441-806e0bfce24a" class="bulleted-list"><li style="list-style-type:circle"><strong>JSlider</strong>: Ein Schieberegler, mit dem der Benutzer einen Wert innerhalb eines Bereichs auswählen kann.</li></ul><ul id="b9bc4bd8-1f23-4e03-ad52-3ba80ed28893" class="bulleted-list"><li style="list-style-type:circle"><strong>JProgressBar</strong>: Eine Fortschrittsanzeige, die den Fortschritt eines laufenden Vorgangs anzeigt.</li></ul><ul id="4b0fa4c7-797c-43c8-b862-a087c0328fd8" class="bulleted-list"><li style="list-style-type:circle"><strong>JFileChooser</strong>: Ein Dialog zur Auswahl von Dateien oder Verzeichnissen.</li></ul><ul id="9ab24514-9d28-46a9-b086-fd0102176179" class="bulleted-list"><li style="list-style-type:circle"><strong>JColorChooser</strong>: Ein Dialog zur Auswahl von Farben.</li></ul><ul id="4f8212f2-c807-4372-8a60-b35c36417f18" class="bulleted-list"><li style="list-style-type:circle"><strong>JDialog</strong>: Ein modales oder nicht modales Dialogfenster.</li></ul></li></ul><p id="d5606d7c-8d81-4369-a6fa-2285836a66a4" class="">Ein einfaches Fenster erstellen:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="12d2a2fb-f0d8-4c5d-b7f2-973c6905e887" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.JFrame;
+
+public class SimpleWindow {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame(&quot;My Simple Window&quot;);
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}</code></pre><p id="af466cb0-840e-4b10-846c-23cc8d9f3486" class="">Layout-Manager <mark class="highlight-orange"><code>import</code></mark><mark class="highlight-gray"><code> java.awt.*;</code></mark></p><ul id="8cd830a7-ee1e-4edc-aad3-c311e2bb2d87" class="bulleted-list"><li style="list-style-type:disc"><strong>BorderLayout</strong>: Teilt den Container in fünf Bereiche (Norden, Süden, Osten, Westen, Zentrum).</li></ul><ul id="fb96602d-5c4b-4366-ab9e-89492269de35" class="bulleted-list"><li style="list-style-type:disc"><strong>GridLayout</strong>: Ordnet Komponenten in einem Gitter an. </li></ul><p id="42f9fba5-fb9c-4659-9d1a-6920712862bc" class="">Hinzufügen von Komponenten:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fa92ab1b-d261-41f8-8840-60f4540a5883" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.JButton;
+import javax.swing.JFrame;
+import java.awt.GridLayout;
+
+public class ButtonGrid {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame(&quot;Button Grid&quot;);
+        frame.setLayout(new GridLayout(4, 5)); // 4 Reihen, 5 Spalten
+
+        for (int i = 1; i &lt;= 20; i++) {
+            frame.add(new JButton(String.valueOf(i)));
+        }
+
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}</code></pre><p id="dcd75d84-1702-45bb-acc7-1413420c18b8" class="">Ereignisbehandlung</p><ul id="35e50eb6-af97-4ebe-bf71-cd43204ce5da" class="bulleted-list"><li style="list-style-type:disc"><strong>ActionListener</strong>: Reagiert auf Aktionen wie das Klicken auf einen Button.</li></ul><ul id="9552e4ed-a7f2-46ec-81ce-549b54b8604f" class="bulleted-list"><li style="list-style-type:disc"><strong>WindowListener</strong>: Reagiert auf Fensterereignisse wie das Schließen eines Fensters.</li></ul><p id="eed09629-5566-41a2-a49f-74ddf1777f10" class="">Beispiel: Schließen des Fensters mit Bestätigung:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="efb80b86-6fb6-4870-812d-0ffc5d211d1b" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ConfirmCloseWindow extends JFrame {
+    public ConfirmCloseWindow() {
+        setTitle(&quot;Confirm Close Window&quot;);
+        setLayout(new GridLayout(4, 5));
+
+        for (int i = 1; i &lt;= 20; i++) {
+            add(new JButton(String.valueOf(i)));
+        }
+
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                int confirmed = JOptionPane.showConfirmDialog(null,
+                  &quot;Are you sure you want to exit?&quot;, &quot;Exit Confirmation&quot;,
+                  JOptionPane.YES_NO_OPTION);
+
+                if (confirmed == JOptionPane.YES_OPTION) {
+                    dispose();
+                }
+            }
+        });
+
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ConfirmCloseWindow();
+    }
+}</code></pre><p id="952f50eb-a13d-447f-ad14-fb6c90882a05" class="">Benutzerdefinierte Zeichenfläche</p><ul id="906870d5-1044-4b82-a12c-5ae4e8286b64" class="bulleted-list"><li style="list-style-type:disc"><strong>JPanel</strong>: Kann überschrieben werden, um benutzerdefinierte Grafiken zu zeichnen.</li></ul><p id="be88f582-5715-406f-bb1e-f231d5f3931a" class="">Beispiel: Zeichenfläche mit Mausereignissen:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a9a4c9ab-2c3c-49f5-9fd5-3e9c793f5957" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CustomPanel extends JPanel {
+    private boolean insideSquare = false;
+
+    public CustomPanel() {
+        setPreferredSize(new Dimension(400, 400));
+        addMouseMotionListener(new MouseAdapter() {
+            public void mouseMoved(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+                insideSquare = x &gt;= 50 &amp;&amp; x &lt;= 100 &amp;&amp; y &gt;= 100 &amp;&amp; y &lt;= 150;
+                repaint();
+            }
+        });
+    }
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(insideSquare ? Color.RED : Color.GREEN);
+        g.fillRect(50, 100, 50, 50);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame(&quot;Custom Panel&quot;);
+        frame.add(new CustomPanel());
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}</code></pre><p id="312191c7-e56d-451f-be8d-1e40874ada09" class="">
+</p><p id="261020d6-fbe2-4ca5-bf8a-d16d96c26a13" class="">Weitere Beispiele:</p><p id="d90c0deb-0258-471b-b727-5924eb089880" class=""><strong>JPanel</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9f92b4ee-b6af-4ef8-adda-c744b48d04ba" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+public class MyPanelFrame extends JFrame {
+    public MyPanelFrame() {
+        setTitle(&quot;JPanel Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel(&quot;Dies ist ein JLabel in einem JPanel&quot;);
+        panel.add(label);
+
+        add(panel);
+    }
+
+    public static void main(String[] args) {
+        MyPanelFrame frame = new MyPanelFrame();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="809e3e13-e631-454d-88c7-2641b549758d" class=""><strong>JButton, JLabel, JTextField</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e199d8f-8a27-47a9-b2fc-c6a7a3c2e824" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+
+public class SimpleForm extends JFrame {
+    public SimpleForm() {
+        setTitle(&quot;Einfaches Formular&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel(&quot;Name:&quot;);
+        JTextField textField = new JTextField(20);
+        JButton button = new JButton(&quot;Submit&quot;);
+
+        panel.add(label);
+        panel.add(textField);
+        panel.add(button);
+
+        add(panel);
+    }
+
+    public static void main(String[] args) {
+        SimpleForm frame = new SimpleForm();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="61e59cd6-fa59-4730-94cd-aef97fe58b9a" class=""><strong>Layouts</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="eebe65c7-8232-4bea-a4c8-bd2dfc2159fe" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import java.awt.*;
+
+public class LayoutExample extends JFrame {
+    public LayoutExample() {
+        setTitle(&quot;Layout Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(new JButton(&quot;North&quot;), BorderLayout.NORTH);
+        panel.add(new JButton(&quot;South&quot;), BorderLayout.SOUTH);
+        panel.add(new JButton(&quot;East&quot;), BorderLayout.EAST);
+        panel.add(new JButton(&quot;West&quot;), BorderLayout.WEST);
+        panel.add(new JButton(&quot;Center&quot;), BorderLayout.CENTER);
+
+        add(panel);
+    }
+
+    public static void main(String[] args) {
+        LayoutExample frame = new LayoutExample();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="c68776fe-d343-455e-b681-9fe12d7a73a0" class="">Event-Handling</p><p id="e09509de-b236-4bbe-a02f-34b4d9557cef" class=""><strong>ActionListener</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b7844b8e-5dcf-4b69-aaea-e6ac0305a68b" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ButtonClickExample extends JFrame implements ActionListener {
+    private JButton button;
+
+    public ButtonClickExample() {
+        setTitle(&quot;ActionListener Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        button = new JButton(&quot;Klick mich&quot;);
+        button.addActionListener(this);
+
+        add(button);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            System.out.println(&quot;Button wurde geklickt!&quot;);
+        }
+    }
+
+    public static void main(String[] args) {
+        ButtonClickExample frame = new ButtonClickExample();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="8917d8b8-b673-47c6-abeb-c963ea03dfad" class=""><strong>MouseListener, KeyListener</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="30f5e1d8-0e3f-475e-ae4f-6a14f6623cd4" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import java.awt.event.*;
+
+public class MouseKeyListenerExample extends JFrame implements MouseListener, KeyListener {
+    private JLabel label;
+
+    public MouseKeyListenerExample() {
+        setTitle(&quot;MouseListener und KeyListener Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        label = new JLabel(&quot;Interagiere mit mir!&quot;);
+        label.addMouseListener(this);
+        label.addKeyListener(this);
+        label.setFocusable(true);
+
+        add(label);
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println(&quot;Maus geklickt!&quot;);
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        System.out.println(&quot;Taste gedrückt: &quot; + e.getKeyChar());
+    }
+
+    // Implementierung der anderen benötigten Methoden (leere Körper)
+    @Override
+    public void mousePressed(MouseEvent e) {}
+    @Override
+    public void mouseReleased(MouseEvent e) {}
+    @Override
+    public void mouseEntered(MouseEvent e) {}
+    @Override
+    public void mouseExited(MouseEvent e) {}
+    @Override
+    public void keyPressed(KeyEvent e) {}
+    @Override
+    public void keyReleased(KeyEvent e) {}
+
+    public static void main(String[] args) {
+        MouseKeyListenerExample frame = new MouseKeyListenerExample();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="213dfba3-036f-4cef-9b1b-9c8b67270fac" class=""><strong>JTable</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="80956032-afe9-4d8d-8cc9-677e2a295010" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
+public class TableExample extends JFrame {
+    public TableExample() {
+        setTitle(&quot;JTable Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        String[] columnNames = {&quot;Name&quot;, &quot;Alter&quot;, &quot;Beruf&quot;};
+        Object[][] data = {
+            {&quot;Max&quot;, 25, &quot;Entwickler&quot;},
+            {&quot;Anna&quot;, 30, &quot;Designer&quot;},
+            {&quot;Tom&quot;, 35, &quot;Manager&quot;}
+        };
+
+        JTable table = new JTable(new DefaultTableModel(data, columnNames));
+        add(new JScrollPane(table));
+    }
+
+    public static void main(String[] args) {
+        TableExample frame = new TableExample();
+        frame.setVisible(true);
+    }
+}
+
+</code></pre><p id="5cdb95f6-a092-4cbf-b7f1-34d038a5fe88" class=""><strong>JList</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="78f900ef-a44f-4f19-a422-ed367ea4ecd3" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import javax.swing.*;
+
+public class ListExample extends JFrame {
+    public ListExample() {
+        setTitle(&quot;JList Beispiel&quot;);
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        String[] data = {&quot;Element 1&quot;, &quot;Element 2&quot;, &quot;Element 3&quot;, &quot;Element 4&quot;};
+        JList&lt;String&gt; list = new JList&lt;&gt;(data);
+
+        add(new JScrollPane(list));
+    }
+
+    public static void main(String[] args) {
+        ListExample frame = new ListExample();
+        frame.setVisible(true);
+    }
+}
+</code></pre><p id="e53ecdd3-058f-443e-996d-f10225796a6d" class=""><strong>JOptionPane</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="05adf3db-30d3-441a-979a-df1021293770" class="code"><code class="language-Java">JOptionPane.showMessageDialog(this,
+					&quot;Info&quot;,
+					&quot;Title&quot;,
+					JOptionPane.INFORMATION_MESSAGE
+			);</code></pre><p id="2b223cdd-ed36-4c0a-b271-f20c176dcb11" class="">
+</p><h3 id="289650ce-0cf9-4087-8c22-c6eb88fd096e" class="">1. Schichtenarchitektur</h3><p id="20859933-aeb0-4800-bb7c-0d7f69068556" class="">Die Schichtenarchitektur trennt die Anwendung in mehrere Schichten, die jeweils eine spezifische Verantwortung haben. Die häufigsten Schichten sind:</p><ul id="8d0527e4-7320-4153-a325-ad8d77216d73" class="bulleted-list"><li style="list-style-type:disc"><strong>Präsentationsschicht:</strong> Verarbeitet die Benutzeroberfläche und Benutzerinteraktionen.</li></ul><ul id="a4c05b5d-0232-450e-b842-4bf747ec5448" class="bulleted-list"><li style="list-style-type:disc"><strong>Geschäftslogikschicht:</strong> Enthält die Geschäftslogik und Anwendungsregeln.</li></ul><ul id="9a074c9a-e49e-4df1-8d0c-691f2ea7d3fc" class="bulleted-list"><li style="list-style-type:disc"><strong>Datenzugriffsschicht:</strong> Kümmert sich um die Datenbankoperationen.</li></ul><ul id="9914b950-3d66-4b29-9447-af11ece53a92" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="142a4916-204b-43b7-8b1b-ba35e8a001f2" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">// Präsentationsschicht
+public class Main {
+    public static void main(String[] args) {
+        UserService userService = new UserService(new UserRepository());
+        User user = userService.getUserById(1);
+        System.out.println(user.getName());
+    }
+}
+
+// Geschäftslogikschicht
+public class UserService {
+    private UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public User getUserById(int id) {
+        return userRepository.findById(id);
+    }
+}
+
+// Datenzugriffsschicht
+public class UserRepository {
+    public User findById(int id) {
+        // Simulierte Datenbankabfrage
+        return new User(id, &quot;Alice&quot;);
+    }
+}
+
+public class User {
+    private int id;
+    private String name;
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+</code></pre></li></ul><h3 id="a8e8b092-b64b-4704-aae4-7af1d4cbd99d" class="">2. SOLID-Prinzipien</h3><p id="fc8f7c4a-6f73-409d-827c-2f6b02ca51ad" class="">Die SOLID-Prinzipien sind Designprinzipien, die helfen, wartbaren und erweiterbaren Code zu schreiben.</p><ul id="e7e509cf-4e2c-42bc-96d8-789c1fb2bd89" class="bulleted-list"><li style="list-style-type:disc"><strong>Single Responsibility Principle (SRP):</strong> Eine Klasse sollte nur eine Verantwortlichkeit haben.</li></ul><ul id="7775d241-c481-41f3-814a-62c75f787f46" class="bulleted-list"><li style="list-style-type:disc"><strong>Open/Closed Principle (OCP):</strong> Klassen sollten für Erweiterungen offen, aber für Änderungen geschlossen sein.</li></ul><ul id="db2c415b-9fea-489d-8379-dd807614ac5d" class="bulleted-list"><li style="list-style-type:disc"><strong>Liskov Substitution Principle (LSP):</strong> Objekte einer Basisklasse sollten durch Objekte einer abgeleiteten Klasse ersetzbar sein.</li></ul><ul id="8374cd1b-d916-48f2-95fd-a7e7361cc81a" class="bulleted-list"><li style="list-style-type:disc"><strong>Interface Segregation Principle (ISP):</strong> Viele spezifische Schnittstellen sind besser als eine allgemeine.</li></ul><ul id="13c6d883-b319-4fdd-96b0-f7a504db9391" class="bulleted-list"><li style="list-style-type:disc"><strong>Dependency Inversion Principle (DIP):</strong> Abstraktionen sollten nicht von konkreten Implementierungen abhängen.</li></ul><ul id="5936bbee-b629-4040-a724-9dc987efc465" class="bulleted-list"><li style="list-style-type:disc"><strong>Beispiel für SRP:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ebdea0a7-ad89-45f0-af9c-0407c9c9638a" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class User {
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class UserPrinter {
+    public void printUserName(User user) {
+        System.out.println(user.getName());
+    }
+}
+
+</code></pre></li></ul><h3 id="a24057bf-3ed6-4c80-b94e-2af3aef8cfa0" class="">3. Containerklassen</h3><p id="6fdf8811-fd05-4321-bf1a-dd2a5aa0c718" class="">Containerklassen sind Klassen, die andere Objekte enthalten und verwalten, z.B. <code>ArrayList</code>, <code>HashMap</code>, <code>HashSet</code>. (kann auch ohne main() Funktion sein)</p><ul id="869ff05f-711b-451d-b5fa-db47fa8037a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel mit </strong><code><strong>ArrayList</strong></code><strong> und </strong><code><strong>HashMap</strong></code><strong>:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ef50c799-2a03-4fae-bec5-c19f4ea5b3e0" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.HashMap;
+
+public class ContainerExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;Alice&quot;);
+        list.add(&quot;Bob&quot;);
+
+        for (String name : list) {
+            System.out.println(name);
+        }
+
+        HashMap&lt;Integer, String&gt; map = new HashMap&lt;&gt;();
+        map.put(1, &quot;Alice&quot;);
+        map.put(2, &quot;Bob&quot;);
+
+        for (Integer key : map.keySet()) {
+            System.out.println(key + &quot;: &quot; + map.get(key));
+        }
+    }
+}
+
+</code></pre></li></ul><h3 id="65ab5005-2afa-4155-a25e-10df2e2e8116" class="">4. Singletonmuster</h3><p id="abb8cd00-3ddf-4b30-abc9-69562ab5602d" class="">Das Singletonmuster stellt sicher, dass eine Klasse nur eine Instanz hat und bietet einen globalen Zugriffspunkt auf diese Instanz.</p><ul id="98acf52b-be40-4763-800d-f82f064220b3" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ec0999bf-cb49-443d-854c-f6efc761656e" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+public class Singleton {
+    private static Singleton instance;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    public void showMessage() {
+        System.out.println(&quot;Hello from Singleton!&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Singleton singleton = Singleton.getInstance();
+        singleton.showMessage();
+    }
+}
+
+</code></pre></li></ul><h3 id="4a0ed37a-4949-462e-9417-b9761bd1884a" class="">5. Javabeans</h3><p id="757016d9-018b-4099-b933-bb5b55545124" class="">Javabeans sind wiederverwendbare Softwarekomponenten, die den JavaBeans-Spezifikationen entsprechen. Sie haben einen no-arg Konstruktor, sind serialisierbar und haben Getter- und Setter-Methoden.</p><ul id="bf31cc87-5197-45cb-a657-95693bb7ad98" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bbfdf0f2-497b-4a08-88df-c59191cfb7aa" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">javaCode kopieren
+import java.io.Serializable;
+
+public class UserBean implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String name;
+    private int age;
+
+    public UserBean() {}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+</code></pre></li></ul><h3 id="54257d8f-e35f-4539-8eda-b84c839bdd5d" class="">6. Iteratormuster</h3><p id="2668bee0-99f2-4496-8ff5-c153c70588ef" class="">Das Iteratormuster bietet eine Möglichkeit, die Elemente einer Sammlung sequentiell zu durchlaufen, ohne die zugrunde liegende Darstellung der Sammlung preiszugeben.</p><ul id="ab5055c4-ffa0-49d8-9101-ebc71c10d08f" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6d1c6515-01e9-49b5-8883-3580d6201440" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorExample {
+    public static void main(String[] args) {
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;Alice&quot;);
+        list.add(&quot;Bob&quot;);
+        list.add(&quot;Charlie&quot;);
+
+        Iterator&lt;String&gt; iterator = list.iterator();
+        while (iterator.hasNext()) {
+            String name = iterator.next();
+            System.out.println(name);
+        }
+    }
+}
+
+</code></pre></li></ul><p id="7fb452e3-2dc6-43d4-b52f-aaa5dde2da2b" class="">
+</p><p id="c02586ce-f726-4a6b-a958-31c2f3631c35" class="">
+</p><h2 id="61879f35-befd-4cef-8649-129da69aa81c" class="">SQL</h2><p id="c91be0b7-f185-41dd-bc8e-96e1e06763d8" class="">
+</p><p id="6ac41119-eb0f-45fe-a08d-fec7459ba6b0" class="">SQL-Befehle und deren Verwendung</p><p id="29227a6c-4ca9-404f-933a-761de16a13f2" class="">1. Datenbank und Tabellenverwaltung</p><p id="d08a5ede-a6cc-40f7-8710-13da76f72278" class=""><strong>CREATE DATABASE</strong></p><ul id="a8d1914a-34e5-40d2-a6e6-4e5d2e647551" class="bulleted-list"><li style="list-style-type:disc">Erstellt eine neue Datenbank.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="00b52082-10c7-42f2-ac55-95aba96b0226" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">CREATE DATABASE datenbank_name;</code></pre><p id="b2d56312-dc29-483f-bb6a-d014424f688a" class=""><strong>CREATE TABLE</strong></p><ul id="403a9522-8496-481b-99e8-2d74f9d11da2" class="bulleted-list"><li style="list-style-type:disc">Erstellt eine neue Tabelle.</li></ul><figure id="8c8b69e6-9531-4b62-834e-dbc0eee27497" class="image"><a href="Info%202%20ff67d04dda8c482ebab21afc762f5f17/Untitled.png"><img style="width:708px" src="Info%202%20ff67d04dda8c482ebab21afc762f5f17/Untitled.png"/></a></figure><p id="8ee97655-6491-4005-b17b-1566e78e33dc" class=""><strong>DROP DATABASE</strong></p><ul id="25549572-6110-45e4-818d-3a4d855c53e0" class="bulleted-list"><li style="list-style-type:disc">Löscht eine bestehende Datenbank.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fb9cc48a-cf2c-43c3-a92a-d3a492243ede" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">DROP DATABASE datenbank_name;</code></pre><p id="812b7e32-34c6-4bf7-bbfc-c8d9acb37e05" class=""><strong>DROP TABLE</strong></p><ul id="163742df-74fe-44b3-8073-d0540ddf9e00" class="bulleted-list"><li style="list-style-type:disc">Löscht eine bestehende Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="35293235-e4eb-4f95-a69f-0e123a70d3c6" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">DROP TABLE tabelle_name;</code></pre><p id="adc93f34-4d3f-4fd9-95cf-83e095e5c0be" class=""><strong>ALTER TABLE</strong></p><ul id="0b07a084-0c85-46be-b96f-e780699b751a" class="bulleted-list"><li style="list-style-type:disc">Ändert die Struktur einer bestehenden Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fc23dece-f1f4-4923-b09c-81920965254b" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">ALTER TABLE tabelle_name
+ADD spalte_name datentyp;</code></pre><p id="0fdf85b4-52f4-46fe-a200-ebd3c20d89ff" class="">2. Datenmanipulation</p><p id="be4a47df-f941-4529-b40d-c2f6b5c8b168" class=""><strong>INSERT INTO</strong></p><ul id="24f198b7-e8cd-44f8-9bb5-e93056d7cbd2" class="bulleted-list"><li style="list-style-type:disc">Fügt neue Daten in eine Tabelle ein.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1772b8b9-5437-4e5a-bfd7-454c436e5f56" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">INSERT INTO Vorlesung
+VALUES (NULL, ’Informatik 2’, ’2022’, ’SoSe’, 13);</code></pre><p id="934e8e7c-911d-443a-b038-8e9aa8c3f27e" class=""><strong>UPDATE</strong></p><ul id="58ceba73-feb9-44b6-a71d-94e99539bcd7" class="bulleted-list"><li style="list-style-type:disc">Aktualisiert vorhandene Daten in einer Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a81c195c-b336-4f4b-9d44-d8ae3b46886c" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">UPDATE Vorlesung
+SET DozentID = 5
+WHERE ID = 137;</code></pre><p id="2b4c5006-cbcf-45e1-ab86-68f2f8f589c3" class=""><strong>DELETE</strong></p><ul id="2e531435-72fb-4f52-bcd6-a229658a101f" class="bulleted-list"><li style="list-style-type:disc">Löscht Daten aus einer Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e40b88b-d48c-437e-bc35-934d102c8ea2" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">DELETE FROM Vorlesung
+WHERE Semester = ’SoSe’;</code></pre><p id="2de83c8c-ee2e-4587-8a68-d23456bf20a5" class="">3. Datenabfrage</p><p id="1acd83db-e4e3-46ec-9e3e-bf6e3abbdd62" class=""><strong>SELECT</strong></p><ul id="ea0ae12c-c5df-45a3-b059-3b5d190e01f6" class="bulleted-list"><li style="list-style-type:disc">Wählt Daten aus einer Tabelle aus.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8b1f3b5b-69ed-43a4-8ad8-16d8eacc3d39" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT FROM Vorlesung
+WHERE DozentID IS NULL;</code></pre><p id="76fb12d8-723c-45ec-9022-53fa07aa494f" class=""><strong>JOIN</strong></p><ul id="b8de4ab8-4ea3-4ac3-87fd-2dc3acbed6f8" class="bulleted-list"><li style="list-style-type:disc">Kombiniert Zeilen aus zwei oder mehr Tabellen basierend auf einer verwandten Spalte zwischen ihnen.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b5687209-c94e-45f9-a9e4-ab27da837190" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT tabelle1.spalte1, tabelle2.spalte2, ...
+FROM tabelle1
+JOIN tabelle2
+ON tabelle1.gemeinsame_spalte = tabelle2.gemeinsame_spalte;</code></pre><p id="8b55924e-1df3-4e3c-b641-d11095b6a302" class=""><strong>WHERE</strong></p><ul id="adc95283-eb7b-4d52-9e97-7582ab28892d" class="bulleted-list"><li style="list-style-type:disc">Filtert Datensätze basierend auf einer Bedingung.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="39fa65c1-ab0e-4c3f-a97f-0f90243e0d65" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT spalte1, spalte2, ...
+FROM tabelle_name
+WHERE bedingung;
+
+// DISTINCT -&gt; ohne duplikate
+SELECT DISTINCT Name, Semester FROM Vorlesung;
+</code></pre><p id="e9b46a56-e3b3-4c7e-8020-a254c3739dd7" class=""><strong>GROUP BY</strong></p><ul id="db725d7e-7cc8-4cb3-a80c-cfa5bc60d7c0" class="bulleted-list"><li style="list-style-type:disc">Gruppiert Zeilen, die den gleichen Wert in den angegebenen Spalten haben.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="00763284-ad0e-429e-ae58-7fdeac817102" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT spalte1, COUNT(*)
+FROM tabelle_name
+GROUP BY spalte1;</code></pre><p id="8332f7d7-de55-497b-a235-edbe8652fe78" class=""><strong>ORDER BY</strong></p><ul id="b65fb7d6-4d9d-4dff-ae1b-871bf5a7ddf5" class="bulleted-list"><li style="list-style-type:disc">Sortiert die Ergebniszeilen in auf- oder absteigender Reihenfolge.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="73ae353e-9054-41f7-bce0-59d0df04ceb5" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT spalte1, spalte2, ...
+FROM tabelle_name
+ORDER BY spalte1 ASC|DESC;</code></pre><p id="cd5577ad-3345-4d38-875a-9ca7517e5d33" class=""><strong>HAVING</strong></p><ul id="dfb70fe3-6f49-4761-9da6-4d15732b214a" class="bulleted-list"><li style="list-style-type:disc">Filtert Gruppen von Zeilen.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="daee8d7b-edcd-48a7-add3-cfa249bc4d8f" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">SELECT spalte1, COUNT(*)
+FROM tabelle_name
+GROUP BY spalte1
+HAVING COUNT(*) &gt; wert;</code></pre><p id="7ad7cce1-3764-4887-b26d-677df0cfde06" class="">4. Datenintegrität</p><p id="de88bce6-068c-4365-a699-673a5b2756a6" class=""><strong>PRIMARY KEY</strong></p><ul id="c768b42b-bd37-4dda-a6c4-b22ce30a0442" class="bulleted-list"><li style="list-style-type:disc">Definiert einen Primärschlüssel. Er stellt sicher, dass jede Zeile in einer Tabelle eindeutig identifizierbar ist.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f39091f5-234e-49e6-ae10-2ddb2f3f505d" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">CREATE TABLE tabelle_name (
+    spalte1 datentyp PRIMARY KEY,
+    ...
+);</code></pre><p id="608b5376-2ebb-4266-a7a8-03a127424a32" class=""><strong>FOREIGN KEY</strong></p><ul id="75541614-1b52-4f87-9cfe-2b7562ae504c" class="bulleted-list"><li style="list-style-type:disc">Definiert einen Fremdschlüssel. Er stellt eine Beziehung zwischen zwei Tabellen her und sorgt für referenzielle Integrität.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0237d2bf-10e6-4267-a8e4-a968d7d272c2" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">CREATE TABLE tabelle_name (
+    spalte1 datentyp,
+    spalte2 datentyp,
+    FOREIGN KEY (spalte1) REFERENCES andere_tabelle(spalte1)
+);</code></pre><p id="425b497f-22b3-4147-b208-011f201a4263" class=""><strong>UNIQUE</strong></p><ul id="e66a52db-7f24-4116-8c24-5cd64ac667d7" class="bulleted-list"><li style="list-style-type:disc">Erzwingt die Einzigartigkeit von Werten in einer Spalte, sodass keine doppelten Werte gespeichert werden können.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4266d6a0-766f-4cc8-b03f-6e4b295e0060" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">CREATE TABLE tabelle_name (
+    spalte1 datentyp UNIQUE,
+    ...
+);</code></pre><p id="291105e6-9afd-4d50-99ed-4f3eea67cae9" class=""><strong>CHECK</strong></p><ul id="2b176550-650f-4c22-a36e-acdeb92f680b" class="bulleted-list"><li style="list-style-type:disc">Erzwingt eine Bedingung für Werte in einer Spalte, um sicherzustellen, dass nur gültige Daten eingegeben werden.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="07d690cc-6ebe-4249-952b-84772d316ed2" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">CREATE TABLE tabelle_name (
+    spalte1 datentyp,
+    spalte2 datentyp CHECK (spalte2 &gt; 0),
+    ...
+);</code></pre><p id="5930806d-111b-4781-870b-907f3b51c8a0" class="">Mehrere Tabellen abfragen: == Joins</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d1944073-f0a3-486e-821d-f1824c285493" class="code"><code class="language-SQL">SELECT DISTINCT Vorlesung.Name, Dozent.Name
+FROM Vorlesung, Dozent
+WHERE Vorlesung.DozentID = Dozent.ID
+AND Semester = ’SoSe’;</code></pre><p id="05521b44-223a-44a9-a45f-c76df52b05d4" class="">SQL-Implementierung in Java</p><p id="bb14af99-3555-4128-968d-e8d36bacd703" class="">1. Verbindung zur Datenbank</p><p id="3d418c2c-38f3-4202-98ce-94c3fbc951c6" class=""><strong>Datenbankverbindung herstellen</strong></p><ul id="c9f9d5c2-b96a-4834-bdf1-04a2021b00f0" class="bulleted-list"><li style="list-style-type:disc">Verwendet JDBC (Java Database Connectivity) für die Verbindung zu einer Datenbank.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2bc44c31-a442-4f56-a28e-bccc7fd79d48" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+    public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            String url = &quot;jdbc:mysql://localhost:3306/datenbank_name&quot;;
+            String user = &quot;benutzername&quot;;
+            String password = &quot;passwort&quot;;
+            connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return connection;
+    }
+}</code></pre><p id="fec21fdf-2b18-4860-9488-583749c9eb57" class="">2. Datenmanipulation</p><p id="2b41e4b1-ece5-413a-aa02-f1f0a3030d38" class=""><strong>Daten einfügen</strong></p><ul id="f086dc55-a0d9-4f20-9e86-5a57cfb8601c" class="bulleted-list"><li style="list-style-type:disc">Fügt neue Daten in die Tabelle ein.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5702cba7-f176-45fd-b840-d10a579f1921" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertData {
+    public static void insertData() {
+        String query = &quot;INSERT INTO tabelle_name (spalte1, spalte2) VALUES (?, ?)&quot;;
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, &quot;wert1&quot;);
+            preparedStatement.setInt(2, 123);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p id="b6410ddf-b982-49bb-ba17-d13e13c697fb" class=""><strong>Daten abfragen</strong></p><ul id="114eab46-b55d-46b6-bac4-f3f3b0da54a3" class="bulleted-list"><li style="list-style-type:disc">Fragt Daten aus der Tabelle ab und gibt sie aus.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9017d292-21cc-4c3e-9887-c195410c38db" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class SelectData {
+    public static void selectData() {
+        String query = &quot;SELECT spalte1, spalte2 FROM tabelle_name WHERE bedingung&quot;;
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                String spalte1 = resultSet.getString(&quot;spalte1&quot;);
+                int spalte2 = resultSet.getInt(&quot;spalte2&quot;);
+                System.out.println(spalte1 + &quot;, &quot; + spalte2);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p id="1e96ab9c-67bb-43ee-bf56-cd50b874359f" class=""><strong>Daten aktualisieren</strong></p><ul id="27be673f-ee33-46c5-9671-9b15f79b6a9d" class="bulleted-list"><li style="list-style-type:disc">Aktualisiert vorhandene Daten in der Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7da9ad96-7441-4d6e-8f00-6590f3b984ef" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class UpdateData {
+    public static void updateData() {
+        String query = &quot;UPDATE tabelle_name SET spalte1 = ? WHERE bedingung&quot;;
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, &quot;neuer_wert&quot;);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p id="e6d5f0f6-453a-4b34-b373-0e65609987d9" class=""><strong>Daten löschen</strong></p><ul id="d639a040-02e4-4d1c-ae77-326638b864b9" class="bulleted-list"><li style="list-style-type:disc">Löscht Daten aus der Tabelle.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1477a583-a26d-4aac-98c4-118d5cf51457" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DeleteData {
+    public static void deleteData() {
+        String query = &quot;DELETE FROM tabelle_name WHERE bedingung&quot;;
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p id="a0fa8a09-f13d-4fe3-9ce4-ecf814c641cf" class="">
+</p><p id="bcd248bb-51e5-4c73-8880-a16194a1a313" class="">
+</p><h2 id="f53f0495-218a-415b-a264-279e95a4766b" class="">File Operations:</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0903dcd1-288f-4c16-800d-afedefdfab5b" class="code"><code class="language-Java">// Choose a file -&gt; File path
+public static String chooseFile() {
+        JFileChooser fileChooser = new JFileChooser();
+        int result = fileChooser.showOpenDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            return selectedFile.getAbsolutePath();
+        } else {
+						System.out.println(&quot;No file selected&quot;);
+				}
+				return null;  
+}</code></pre><p id="e0fffa0b-2c36-4c07-a6fc-95ac9984d58a" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7fb7e585-2446-4221-ac3d-a5875edd5bd9" class="code"><code class="language-JavaScript">// Create new file 
+public static boolean createNewFile(String filePath) {
+        File file = new File(filePath);
+        try {
+            // Try to create the file
+            return file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }</code></pre><p id="8747b358-e98b-44de-9072-f6903235dbf6" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="294d91a0-0098-4ea2-97b0-56c4f9694992" class="code"><code class="language-JavaScript">// Write to a file 
+    public static void writeFileUsingBufferedWriter(String filePath, String content) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }</code></pre><p id="de16c038-f8b0-4919-8327-35ff099c0d2b" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="be3b1241-29e4-4f27-afc2-6798608b5162" class="code"><code class="language-Java">public static void appendToFileUsingBufferedWriter(String filePath, String content) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            writer.write(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }</code></pre><p id="b532defd-733c-4aee-b357-ddf1ad4bbd16" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="388e95a9-11d7-49fd-a71c-8f23fbd86f2e" class="code"><code class="language-JavaScript">// Read a file using BufferedReader
+    public static void readFileUsingBufferedReader(String filePath) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }</code></pre><p id="0c46d7d6-8159-4884-b549-4eeb6b261fa5" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4b7ad73d-23a0-4a84-a335-380927b61d80" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">import java.util.Scanner;  // Import the Scanner class
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println(&quot;Enter username&quot;);
+
+    String userName = myObj.nextLine();  // Read user input
+    System.out.println(&quot;Username is: &quot; + userName);  // Output user input
+  }
+}</code></pre><p id="73a98615-2d98-41ef-9d5a-2ef3626fd9c5" class="">
+</p><h2 id="a453e34b-f18d-477c-9afd-a096a27f0508" class="">XML</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="98705ef4-6b96-4252-964a-7da088ad30b2" class="code"><code class="language-XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+...</code></pre><p id="fd638929-79e7-4488-af9b-2c752bac9a6e" class="">
+</p><h2 id="77a28d08-b7e8-4690-ad1e-b9f1d4e61d0a" class="">HTML</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7fc36723-9c1a-4aee-92bf-5a270679359a" class="code"><code class="language-HTML">&lt;!doctype html&gt;
+...</code></pre><p id="80afd560-0459-4099-a975-42e4c990d11a" class="">
+</p><h2 id="f771f166-50d0-4117-a640-bfdaf392291f" class="">JSON example:</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f435f1a4-b3f5-4d8f-b8ae-c3c1a6159a2c" class="code"><code class="language-JSON">{
+  &quot;data&quot;: [{
+    &quot;type&quot;: &quot;articles&quot;,
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;attributes&quot;: {
+      &quot;title&quot;: &quot;JSON:API paints my bikeshed!&quot;,
+      &quot;body&quot;: &quot;The shortest article. Ever.&quot;,
+      &quot;created&quot;: &quot;2015-05-22T14:56:29.000Z&quot;,
+      &quot;updated&quot;: &quot;2015-05-22T14:56:28.000Z&quot;
+    },
+    &quot;relationships&quot;: {
+      &quot;author&quot;: {
+        &quot;data&quot;: {&quot;id&quot;: &quot;42&quot;, &quot;type&quot;: &quot;people&quot;}
+      }
+    }
+  }],
+  &quot;included&quot;: [
+    {
+      &quot;type&quot;: &quot;people&quot;,
+      &quot;id&quot;: &quot;42&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;John&quot;,
+        &quot;age&quot;: 80,
+        &quot;gender&quot;: &quot;male&quot;
+      }
+    }
+  ]
+}
+</code></pre><h3 id="16c5183e-0248-468c-abf4-df84fe8a51d6" class="">1. Threads</h3><p id="15d8f35b-c793-44b7-87a6-401e45354d15" class="">Ein Thread ist der kleinste Ausführungseinheit innerhalb eines Prozesses. Java bietet Unterstützung für Multithreading, was die gleichzeitige Ausführung mehrerer Threads innerhalb eines Programms ermöglicht.</p><ul id="d7686c21-96b8-4d93-8f14-2eba7ac4da84" class="bulleted-list"><li style="list-style-type:disc"><strong>Thread erstellen und starten:</strong><ul id="24605c59-eb58-43b3-9f0e-41dc6250d15e" class="bulleted-list"><li style="list-style-type:circle">Mit der <code>Thread</code>Klasse.</li></ul><ul id="28089825-5962-43b2-a94d-1c5cc504ce11" class="bulleted-list"><li style="list-style-type:circle">Mit der <code>Runnable</code>Schnittstelle.</li></ul></li></ul><ul id="f863970b-9b97-488a-a012-584aed847e7e" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0e0fbaa8-dd5c-46a0-afdb-21ac94b9e6e1" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class MyThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.println(&quot;Thread: &quot; + i);
+            try {
+                Thread.sleep(1000); // 1 Sekunde warten
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        thread.start();
+    }
+}
+
+</code></pre></li></ul><h3 id="80bd28f8-812d-4ebb-bff8-20f7ee7ae728" class="">2. Runnable</h3><p id="c3ade538-4ced-48b8-9b1b-639e357f9492" class=""><code>Runnable</code> ist eine funktionale Schnittstelle, die eine einzige Methode <code>run()</code> enthält. Sie wird verwendet, um den Code zu definieren, der von einem Thread ausgeführt werden soll, ohne die <code>Thread</code>-Klasse zu erweitern.</p><ul id="3be31c6d-6baf-4611-aa02-18e02947b704" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="393d75d7-07c8-4dc8-bcce-4ae6b15ac1db" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.println(&quot;Runnable: &quot; + i);
+            try {
+                Thread.sleep(1000); // 1 Sekunde warten
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Thread thread = new Thread(new MyRunnable());
+        thread.start();
+    }
+}
+
+</code></pre></li></ul><h3 id="b0ad650b-54b5-4072-81d8-c9bc9c56d31c" class="">3. Countdown Example</h3><p id="808dbb28-dde2-4095-9474-9105725a437e" class="">Ein Countdown-Timer ist ein gutes Beispiel für die Anwendung von Threads. Hier wird ein Countdown von 10 Sekunden implementiert, der in jeder Sekunde aktualisiert wird.</p><ul id="48307ad2-923e-4270-a432-9f4f1b02a366" class="bulleted-list"><li style="list-style-type:disc"><strong>Codebeispiel:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7734713f-3ffc-45cc-a464-74bf8713ed1f" class="code"><code class="language-Java" style="white-space:pre-wrap;word-break:break-all">public class CountdownTimer implements Runnable {
+    private int seconds;
+
+    public CountdownTimer(int seconds) {
+        this.seconds = seconds;
+    }
+
+    @Override
+    public void run() {
+        for (int i = seconds; i &gt;= 0; i--) {
+            System.out.println(&quot;Countdown: &quot; + i);
+            try {
+                Thread.sleep(1000); // 1 Sekunde warten
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(&quot;Countdown completed!&quot;);
+    }
+
+    public static void main(String[] args) {
+        int countdownSeconds = 10;
+        Thread countdownThread = new Thread(new CountdownTimer(countdownSeconds));
+        countdownThread.start();
+    }
+}
+
+</code></pre></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
